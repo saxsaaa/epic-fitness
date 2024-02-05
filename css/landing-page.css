@@ -51,10 +51,10 @@
 }
 
 .hero-wrapper {
-  height: 20rem;
+  height: 28rem;
   align-self: end;
   justify-self: end;
-  margin-top: 23rem;
+  margin-top: 28rem;
 }
 
 .hero-wrapper p {
@@ -62,4 +62,47 @@
   line-height: 1.5rem;
   color: var(--clr-neutral-100);
   opacity: 0.8;
+}
+
+.hero-title {
+  max-width: 18ch;
+}
+
+/* menu list */
+.custom-grid {
+  gap: 2rem;
+}
+.box-wrapper {
+  background-image: url("/images/box-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  margin-top: var(--size-900);
+  margin-bottom: var(--size-900);
+  display: grid;
+  height: 10rem;
+}
+
+.box-item {
+  text-decoration: none;
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  font-size: 1.5rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+}
+
+.red-box-icon {
+  background: rgb(255, 102, 102);
+  background: linear-gradient(180deg, rgba(255, 102, 102, 1) 0%, rgba(229, 34, 34, 1) 35%, rgba(153, 1, 1, 1) 100%);
+  color: var(--clr-neutral-100);
+  width: 6.5rem;
+  height: 6.5rem;
+  padding: var(--size-300);
+  font-size: 3rem;
+  position: relative;
+  bottom: 3rem;
+  left: 2rem;
+  text-align: center;
 }

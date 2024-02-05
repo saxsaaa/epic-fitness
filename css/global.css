@@ -141,7 +141,7 @@ p:not([class]) {
 .button {
   border: 0;
   text-decoration: none;
-  border-radius: 100vmax;
+  border-radius: 0 1rem;
   padding: 0.9em 1.5em;
   line-height: 1;
   font-weight: var(--fw-bold);
@@ -283,7 +283,7 @@ p:not([class]) {
 }
 
 .container {
-  --max-width: 1410px;
+  --max-width: 1510px;
   --container-padding: 1rem;
   width: min(var(--max-width), 100% - var(--container-padding) * 2);
   margin-inline: auto;
