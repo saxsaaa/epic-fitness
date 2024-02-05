@@ -1,0 +1,65 @@
+@import url("global.css");
+
+/* navbar */
+.nav-bg-color {
+  background-color: rgba(20, 20, 20, 0.5);
+}
+.nav-wrapper {
+  padding-top: var(--size-300);
+  padding-bottom: var(--size-300);
+}
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-list {
+  font-size: var(--fs-nav);
+}
+
+.nav-list {
+  display: flex;
+  gap: clamp(var(--size-400), 5vw, var(--size-700));
+  font-weight: var(--fw-bold);
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--clr-neutral-100);
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  margin-right: -22rem;
+}
+
+.nav-list a:hover,
+.nav-list a:focus-within {
+  text-decoration: none;
+  color: var(--clr-accent-500);
+}
+
+.bg-photo {
+  background-image: url("/images/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 62.9rem;
+}
+
+.hero-wrapper {
+  height: 20rem;
+  align-self: end;
+  justify-self: end;
+  margin-top: 23rem;
+}
+
+.hero-wrapper p {
+  max-width: 68ch;
+  line-height: 1.5rem;
+  color: var(--clr-neutral-100);
+  opacity: 0.8;
+}
