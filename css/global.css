@@ -126,6 +126,29 @@ svg {
   }
 } */
 
+/* For WebKit browsers (Chrome, Safari, newer versions of Opera) */
+::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--clr-primary-400); /* Set the color of the scrollbar thumb */
+  border-radius: 10px; /* Optional: Add rounded corners to the scrollbar thumb */
+}
+
+/* For Firefox */
+/* Note: This is a Mozilla Firefox specific property and might not work in all versions */
+/* For full support, you might need to use a pseudo-element like ::-moz-scrollbar-thumb */
+* {
+  scrollbar-color: var(--clr-primary-400) #f0f0f0; /* Set the color of the scrollbar thumb and track */
+}
+
+/* Optional: Add rounded corners to the scrollbar thumb in Firefox */
+*::-moz-scrollbar-thumb {
+  background-color: var(--clr-primary-400);
+  border-radius: 10px;
+}
+
 /* general styling */
 
 body {

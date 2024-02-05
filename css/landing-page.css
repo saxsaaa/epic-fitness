@@ -12,6 +12,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: top 0.3s; /* Smooth transition effect */
 }
 
 .nav-list {
