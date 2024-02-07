@@ -418,3 +418,91 @@
     padding: 25% 5%;
   }
 }
+/* 
+.classes-title {
+  display: grid;
+  justify-items: center;
+}
+
+.class-image {
+  width: 100%;
+}
+.class-item {
+  width: 25rem;
+  overflow: hidden;
+  background-color: red;
+  margin: 0 3rem;
+  border-radius: 0.8rem;
+}
+
+.class-text-wrapper {
+  padding: var(--size-500);
+} */
+.class-item {
+  border: 3px solid var(--clr-neutral-200);
+  position: relative; /* Ensure positioning context for child elements */
+}
+
+.class-content-wrapper {
+  padding: 0 var(--size-500);
+  position: relative; /* Ensure positioning context for absolute positioning */
+}
+.class-image {
+  height: 12rem;
+  width: 100%;
+  object-fit: cover;
+}
+.price {
+  background-color: var(--clr-primary-400);
+  width: 30%;
+  padding: 0.5rem;
+  text-align: center;
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-500);
+  border: 0.5rem solid var(--clr-neutral-100);
+  position: absolute; /* Position the price text absolutely within the parent container */
+  top: -4.3rem; /* Adjust the distance from the top */
+  left: calc(5%); /* Center the price horizontally */
+  z-index: 9999;
+  border-radius: 0 1rem;
+}
+.class-duration {
+  opacity: 0.8;
+}
+:where(.class-text-wrapper :not(:first-child)) {
+  margin-top: var(--flow-spacer, 1em);
+}
+.class-button {
+  color: var(--clr-primary-400);
+  font-size: 1rem;
+  font-weight: var(--fw-bold);
+  margin-bottom: var(--size-400);
+}
+.class-name {
+  margin-top: 2.5rem;
+}
+
+@media screen and (min-width: 47em) and (max-width: 80em) {
+  .class-wrapper-grid {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .classes-title {
+    font-size: 3rem;
+  }
+  .class-image {
+    object-position: center;
+    height: 20rem;
+  }
+}
+@media screen and (max-width: 47em) {
+  .classes-title {
+    font-size: 2.5rem;
+  }
+  .class-image {
+    object-position: center;
+    height: 20rem;
+  }
+}

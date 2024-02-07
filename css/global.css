@@ -313,7 +313,7 @@ p:not([class]) {
 }
 
 .container {
-  --max-width: 1310px;
+  --max-width: 1210px;
   --container-padding: 1rem;
   width: min(var(--max-width), 100% - var(--container-padding) * 2);
   margin-inline: auto;
