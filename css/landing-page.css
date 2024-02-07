@@ -96,18 +96,19 @@
   margin-bottom: var(--size-900); */
   padding-right: var(--size-300);
   display: grid;
-  height: 100%;
+  height: 90%;
   transition: 0.5s;
-  /* border-radius: 0 2.5rem; */
+  border-radius: 0 2.5rem;
 }
 
 .box-item {
   text-decoration: none;
   color: var(--clr-neutral-100);
   font-weight: var(--fw-bold);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   padding-left: 2rem;
   padding-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .red-box-icon {
@@ -122,7 +123,7 @@
   bottom: 3rem;
   left: 2rem;
   text-align: center;
-  /* border-radius: 0 1.5rem; */
+  border-radius: 0 1.5rem;
 }
 @media screen and (min-width: 47em) and (max-width: 80em) {
   .custom-grid {
@@ -187,6 +188,16 @@
   padding-left: var(--size-700);
 }
 
+.square-title {
+  background-color: var(--clr-accent-500); /* the red box on the title */
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  top: 1.5rem;
+  right: 1.8rem;
+  z-index: -1;
+  margin-top: -3rem;
+}
 .about-text {
   max-width: 80ch;
   line-height: 1.5rem;
@@ -295,5 +306,115 @@
 @media screen and (max-width: 18em) {
   .service-icon {
     height: 2.3rem;
+  }
+}
+
+/* Workout equipment Section */
+
+.workout-equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100%;
+}
+.equipment-title-bg {
+  height: 20rem;
+  display: grid;
+  align-items: end;
+  justify-items: center;
+}
+.equipment-title {
+  background-color: var(--clr-primary-400);
+  width: 100%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--clr-neutral-100);
+  font-weight: var(--fw-black);
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0 2rem;
+}
+
+.equipment-box {
+  height: 100%;
+  width: 100%;
+  padding: 15% 20%;
+}
+
+.boxing {
+  background-image: url("/images/boxing.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 31.5rem;
+}
+.cardio {
+  background-image: url("/images/cardio.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 31.5rem;
+}
+
+.aerobics {
+  background-image: url("/images/aerobics-1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 31.5rem;
+}
+
+.calisthenics {
+  background-image: url("/images/calisthenics.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  height: 31.5rem;
+}
+.crossfit {
+  background-image: url("/images/crossfit.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  height: 31.5rem;
+}
+
+.power-lifting {
+  background-image: url("/images/powerlifting.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 31.5rem;
+}
+
+@media screen and (min-width: 47em) and (max-width: 80em) {
+  .calisthenics .equipment-title {
+    width: 100%;
+  }
+  .workout-equipment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .workout-equipment-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 47em) {
+  .workout-equipment-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .crossfit {
+    background-position: center right;
+  }
+  .workout-equipment-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 31em) {
+  .equipment-box {
+    padding: 25% 5%;
   }
 }
