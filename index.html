@@ -7,7 +7,8 @@
     <title>Vite App</title>
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/landing-page.css" />
-
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
   </head>
@@ -53,7 +54,7 @@
       </section>
     </header>
     <main>
-      <section>
+      <section class="flow-area">
         <div class="container">
           <div class="even-columns | custom-grid">
             <div class="box-wrapper">
@@ -141,8 +142,9 @@
         </div>
       </section>
       <br />
+
       <!-- Workout Equipments section -->
-      <section>
+      <section class="flow-area">
         <div class="container margin-top-700 margin-bottom-700">
           <div class="square-title"></div>
           <h3 class="fs-primary-heading fw-black workout-equipment-title">Epic Fitness Workout Equipments</h3>
@@ -200,8 +202,8 @@
       </section>
       <!-- end of workout equipment sections -->
 
-      <section>
-        <div class="container margin-top-700 margin-bottom-700">
+      <section class="flow-area">
+        <div class="container">
           <div class="square-title"></div>
           <h3 class="classes-title | fs-primary-heading fw-black margin-bottom-700">Epic Fitness Classes</h3>
           <div class="even-columns | class-wrapper-grid">
@@ -268,8 +270,89 @@
         </div>
       </section>
 
-      <section class="margin-top-700"></section>
+      <section class="testimonial-background flow-area">
+        <div class="container">
+          <div class="testimonial-wrapper">
+            <h3 class="testimonial-title | fs-primary-heading fw-black">Testimonials</h3>
+            <div class="testimonial-swiper">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="testimonial-profile">
+                      <div class="testimonial-image">
+                        <img src="images/testimonial-profile.jpg" alt="" />
+                      </div>
+                      <div class="testimonial-name">
+                        <p>Alex Johnson</p>
+                        <p class="testimonial-role">Boxing Coach</p>
+                      </div>
+                    </div>
+                    <p class="testimonial-text">
+                      "Epic Fitness has been the perfect arena for honing boxing skills. The supportive community and top-notch
+                      facilities ensure every boxer reaches their full potential. With personalized training and a focus on
+                      technique, I've seen my clients excel both in the ring and in their overall fitness journey."
+                    </p>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <div class="testimonial-profile">
+                      <div class="testimonial-image">
+                        <img src="images/testimonial-profile-3.jpg" alt="" />
+                      </div>
+                      <div class="testimonial-name">
+                        <p>Emily Rodriguez</p>
+                        <p class="testimonial-role">CrossFit Coach</p>
+                      </div>
+                    </div>
+                    <p class="testimonial-text">
+                      "At Epic Fitness, CrossFit enthusiasts find their ultimate playground. The diverse workouts and constant
+                      challenge push athletes to new heights of strength and endurance. With a supportive coaching team and a
+                      community of like-minded individuals, every WOD becomes a stepping stone toward greatness."
+                    </p>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testimonial-profile">
+                      <div class="testimonial-image">
+                        <img src="images/testimonial-profile-2.jpg" alt="" />
+                      </div>
+                      <div class="testimonial-name">
+                        <p>Michael Thompson</p>
+                        <p class="testimonial-role">Powerlifting Coach</p>
+                      </div>
+                    </div>
+                    <p class="testimonial-text">
+                      "Epic Fitness provides the ideal platform for powerlifters to thrive. From state-of-the-art equipment to
+                      expert guidance, every lifter can push their limits and achieve new personal bests. The camaraderie amongst
+                      athletes fosters an environment of growth and empowerment."
+                    </p>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="testimonial-profile">
+                      <div class="testimonial-image">
+                        <img src="images/testimonial-profile-4.jpg" alt="" />
+                      </div>
+                      <div class="testimonial-name">
+                        <p>Sarah Martinez</p>
+                        <p class="testimonial-role">Weight Loss Coach</p>
+                      </div>
+                    </div>
+                    <p class="testimonial-text">
+                      "Epic Fitness isn't just about transforming bodies; it's about transforming lives. As a weight loss coach,
+                      I've witnessed incredible journeys of self-discovery and empowerment. With personalized nutrition plans,
+                      motivating workouts, and a supportive community, Epic Fitness becomes the catalyst for sustainable lifestyle
+                      changes."
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

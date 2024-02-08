@@ -306,6 +306,10 @@ p:not([class]) {
   display: none;
 }
 
+.flow-area {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
 @media (min-width: 47em) {
   .display-md-inline-flex {
     display: inline-flex;
@@ -313,7 +317,7 @@ p:not([class]) {
 }
 
 .container {
-  --max-width: 1210px;
+  --max-width: 1410px;
   --container-padding: 1rem;
   width: min(var(--max-width), 100% - var(--container-padding) * 2);
   margin-inline: auto;
@@ -368,4 +372,15 @@ p:not([class]) {
   .text-center-sm-only p {
     margin-inline: auto;
   }
+}
+
+.square-title {
+  background-color: var(--clr-accent-500); /* the red box on the title */
+  width: 3rem;
+  height: 3rem;
+  position: relative;
+  top: 1.5rem;
+  right: 1.8rem;
+  z-index: -1;
+  margin-top: -3rem;
 }
