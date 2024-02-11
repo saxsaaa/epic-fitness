@@ -384,3 +384,32 @@ p:not([class]) {
   z-index: -1;
   margin-top: -3rem;
 }
+
+.overlay {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  display: flex;
+}
+.bar {
+  width: 100vw; /* Adjust width of bars to match viewport width */
+  height: 100vh; /* Adjust height of bars to match viewport height */
+  background: #1a1a1a;
+}
+
+#preloader {
+  /* Your preloader styles */
+  background: #1a1a1a url("/images/loader.gif") no-repeat center center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  overflow: hidden !important;
+  transition: opacity 0.5s ease; /* Add transition effect for opacity */
+  opacity: 1; /* Initially set opacity to 1 */
+}
+
+#preloader.hidden {
+  opacity: 0; /* When hidden class is added, fade out the preloader */
+}
