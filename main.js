@@ -1,5 +1,10 @@
 import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+// Register ScrollTrigger with GSAP
+gsap.registerPlugin(ScrollTrigger);
+
+// Initialize Swiper for testimonials
 var swiper = new Swiper(".mySwiper", {
   pagination: {
     el: ".swiper-pagination",
@@ -7,16 +12,16 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
-// Wrap your code inside the window.onload function to ensure everything is loaded before execution
+// Preloader functionality
 window.onload = function () {
   // Hide preloader once the page content is loaded
   document.getElementById("preloader").style.display = "none";
 
-  // Start your animation after the preloader is hidden
+  // Start loader animation after the preloader is hidden
   startLoaderAnimation();
 };
 
-// Function to start the loader animation using GSAP
+// Function to animate loader using GSAP
 function startLoaderAnimation() {
   gsap.to(".bar", {
     duration: 2.5,
@@ -28,15 +33,52 @@ function startLoaderAnimation() {
   });
 }
 
-// Event listener to reset the preloader animation when the page is about to be reloaded
+// Reset preloader animation before page reload
 window.addEventListener("beforeunload", function () {
-  // Show the preloader
   var preloader = document.getElementById("preloader");
   preloader.style.display = "block";
-
-  // Add a delay before hiding the preloader
+  window.scrollTo(0, 0); // Scroll to top when refreshed
+  // Hide the preloader after a short delay
   setTimeout(function () {
-    // Hide the preloader after a short delay (100 milliseconds)
     preloader.style.display = "none";
-  }, 100); // Adjust this delay if needed
+  }, 100);
 });
+
+// GSAP animation with ScrollTrigger
+let tl = gsap.timeline({
+  // scrollTrigger: {
+  //   trigger: "box-area",
+  //   start: "20% center",
+  //   end: "top",
+  //   scrub: true,
+  //   markers: true,
+  // },
+});
+
+tl.to(".hero-wrapper", {
+  delay: 1.7,
+  duration: 0.8,
+  x: -1400,
+});
+
+tl.to(".box-wrapper", {
+  delay: 0,
+  duration: 0,
+  x: 2000,
+  stagger: 0.2,
+});
+
+// Smooth scrolling using Lenis library
+const lenis = new Lenis();
+
+lenis.on("scroll", (e) => {
+  console.log(e); // Log scroll events
+});
+
+// RequestAnimationFrame for smooth scrolling
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);

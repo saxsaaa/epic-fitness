@@ -57,6 +57,8 @@
   align-self: end;
   justify-self: end;
   margin-top: 28rem;
+  position: relative; /* used for animation using gsap*/
+  left: 1400px; /* used for animation using gsap*/
 }
 
 .hero-wrapper p {
@@ -88,6 +90,10 @@
   transition: 0.5s;
   margin-top: 7rem;
   margin-bottom: 7rem;
+}
+.box-area {
+  position: relative;
+  left: -2000px;
 }
 .box-wrapper {
   background-image: url("/images/box-bg.jpg");
