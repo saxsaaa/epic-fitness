@@ -1,3 +1,4 @@
+// Import GSAP and ScrollTrigger
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -44,28 +45,128 @@ window.addEventListener("beforeunload", function () {
   }, 100);
 });
 
-// GSAP animation with ScrollTrigger
-let tl = gsap.timeline({
-  // scrollTrigger: {
-  //   trigger: "box-area",
-  //   start: "20% center",
-  //   end: "top",
-  //   scrub: true,
-  //   markers: true,
-  // },
-});
-
-tl.to(".hero-wrapper", {
+// Hero section animation
+gsap.to(".hero-wrapper", {
   delay: 1.7,
   duration: 0.8,
   x: -1400,
 });
 
-tl.to(".box-wrapper", {
+// Box wrapper animation with ScrollTrigger
+gsap.to(".box-wrapper", {
   delay: 0,
-  duration: 0,
+  duration: 1,
   x: 2000,
-  stagger: 0.2,
+  stagger: 1,
+  scrollTrigger: {
+    trigger: ".box-wrapper",
+    markers: false,
+    start: "top 100%",
+    end: "top 85%",
+    scrub: true,
+  },
+});
+
+// About section animation with ScrollTrigger
+gsap.to(".about-animation", {
+  visibility: "visible",
+  delay: 0,
+  duration: 5,
+  y: 0,
+  stagger: 4,
+  scrollTrigger: {
+    trigger: ".about-animation",
+    markers: false,
+    start: "-600px 100%",
+    end: "top 70%",
+    scrub: true,
+  },
+});
+
+// Function to create ScrollTrigger dynamically based on screen size
+const aboutSection = document.querySelector(".about-section");
+let scrollTriggerInstance;
+
+function createScrollTrigger() {
+  if (window.matchMedia("(max-width: 47em)").matches) {
+    // Apply ScrollTrigger with pinning for smaller screens
+    if (scrollTriggerInstance) {
+      scrollTriggerInstance.kill(); // Remove existing instance if it exists
+    }
+    scrollTriggerInstance = ScrollTrigger.create({
+      trigger: aboutSection,
+      start: "top -800px",
+      end: "bottom top",
+      pin: true,
+      pinSpacing: false,
+      markers: false,
+    });
+  } else {
+    // Apply ScrollTrigger with pinning for larger screens
+    if (scrollTriggerInstance) {
+      scrollTriggerInstance.kill(); // Remove existing instance if it exists
+    }
+    scrollTriggerInstance = ScrollTrigger.create({
+      trigger: aboutSection,
+      start: "top top",
+      end: "bottom top",
+      pin: true,
+      pinSpacing: false,
+      markers: false,
+    });
+  }
+}
+
+// Call the function initially
+createScrollTrigger();
+
+// Add event listener for screen size changes to update ScrollTrigger
+window.addEventListener("resize", createScrollTrigger);
+
+// Box wrapper animation with ScrollTrigger
+gsap.to(".class-item", {
+  visibility: "visible",
+  delay: 0,
+  duration: 2,
+  left: 0,
+  stagger: 1,
+
+  scrollTrigger: {
+    trigger: ".class-item",
+    markers: false,
+    start: "top 100%",
+    end: "bottom 100%",
+    scrub: true,
+  },
+});
+gsap.to(".testimonial-wrapper", {
+  visibility: "visible",
+  delay: 0,
+  duration: 1,
+  x: 0,
+
+  scrollTrigger: {
+    trigger: ".testimonial-wrapper",
+    markers: false,
+    start: "top 100%",
+    end: "center 80%",
+    scrub: true,
+  },
+});
+gsap.to(".blog-card", {
+  visibility: "visible",
+  delay: 0,
+  duration: 2,
+  left: 0,
+  stagger: 1,
+
+  scrollTrigger: {
+    trigger: ".blog-card",
+    markers: false,
+    start: "top 100%",
+    end: "bottom 50%",
+    scrub: true,
+  },
 });
 
 // Smooth scrolling using Lenis library

@@ -174,7 +174,9 @@
 }
 
 /* about */
-
+.about-section {
+  z-index: -4;
+}
 .about-wrapper {
   display: grid;
   align-items: center;
@@ -184,6 +186,10 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+}
+.about-animation {
+  visibility: hidden;
+  transform: translateY(100%);
 }
 .about-image-wrapper img {
   width: 95%;
@@ -309,7 +315,6 @@
 }
 
 /* Workout equipment Section */
-
 .workout-equipment-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -342,6 +347,12 @@
   padding: 15% 20%;
 }
 
+.workout-equipment-title-area {
+  margin-top: 7rem;
+}
+.workout-equipment-section {
+  margin-top: -6.5rem;
+}
 .boxing {
   background-image: url("/images/boxing.png");
   background-size: cover;
@@ -423,6 +434,8 @@
 .class-item {
   border: 3px solid var(--clr-neutral-200);
   position: relative; /* Ensure positioning context for child elements */
+  visibility: hidden;
+  left: -100%; /* Position the item outside its container */
 }
 
 .class-content-wrapper {
@@ -503,6 +516,8 @@
   width: 40rem;
   padding-top: 13%;
   transition: 0.5s;
+  visibility: hidden;
+  transform: translatex(100%);
 }
 
 .testimonial-title {
@@ -570,6 +585,9 @@
 
 .blog-card {
   border: 2px solid var(--clr-neutral-200);
+  visibility: hidden;
+  position: relative;
+  left: -100%;
 }
 .blog-card img {
   width: 100%;
