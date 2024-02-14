@@ -391,25 +391,145 @@ p:not([class]) {
   height: 100vh;
   z-index: 10;
   display: flex;
+  pointer-events: none; /* Disable pointer events on the overlay */
 }
+
 .bar {
-  width: 100vw; /* Adjust width of bars to match viewport width */
-  height: 100vh; /* Adjust height of bars to match viewport height */
+  width: 100vw;
+  height: 100vh;
   background: #1a1a1a;
+  pointer-events: none; /* Disable pointer events on the bars */
 }
 
 #preloader {
-  /* Your preloader styles */
   background: #1a1a1a url("/images/loader.gif") no-repeat center center;
   height: 100vh;
   width: 100%;
   position: fixed;
   z-index: 100;
   overflow: hidden !important;
-  transition: opacity 0.5s ease; /* Add transition effect for opacity */
-  opacity: 1; /* Initially set opacity to 1 */
+  transition: opacity 0.5s ease;
+  opacity: 1;
+  pointer-events: none; /* Disable pointer events on the preloader */
 }
 
 #preloader.hidden {
-  opacity: 0; /* When hidden class is added, fade out the preloader */
+  opacity: 0;
+  pointer-events: none; /* Disable pointer events when hidden */
+}
+
+/* navbar */
+.nav-bg-color {
+  background-color: rgba(20, 20, 20, 0.5);
+}
+.nav-wrapper {
+  padding-top: var(--size-300);
+  padding-bottom: var(--size-300);
+}
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: top 0.3s; /* Smooth transition effect */
+}
+
+.nav-list {
+  font-size: var(--fs-nav);
+}
+
+.nav-list {
+  display: flex;
+  gap: clamp(var(--size-400), 5vw, var(--size-700));
+  font-weight: var(--fw-bold);
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--clr-neutral-100);
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  margin-right: -22rem;
+}
+
+.nav-list a:hover,
+.nav-list a:focus-within {
+  text-decoration: none;
+  color: var(--clr-accent-500);
+}
+
+/* footer */
+
+.footer-background {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/footer.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 4rem;
+}
+.logo-area {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.footer-grid-area {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.footer-box-icon {
+  background: rgb(255, 102, 102);
+  background: linear-gradient(180deg, rgba(255, 102, 102, 1) 0%, rgba(229, 34, 34, 1) 35%, rgba(153, 1, 1, 1) 100%);
+  color: var(--clr-neutral-100);
+  width: 100%;
+  height: 100%;
+  padding: var(--size-300);
+  font-size: 2.5rem;
+  /* position: relative;
+  bottom: 3rem;
+  left: 2rem; */
+  text-align: center;
+  border-radius: 0 1.5rem;
+}
+
+.footer-text {
+  color: var(--clr-neutral-100);
+  font-weight: bold;
+  width: 300%;
+}
+@media screen and (min-width: 47em) and (max-width: 80em) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 47em) {
+  .footer-grid {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 0 4rem 0;
+  }
+
+  .footer-grid-area {
+    gap: 1rem;
+  }
+  .footer-text {
+    width: 600%;
+  }
+}
+
+@media screen and (max-width: 30em) {
+  .footer-text {
+    width: 300%;
+  }
+  .footer-box-icon {
+    font-size: 2.5rem;
+  }
 }

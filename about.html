@@ -1,0 +1,147 @@
+<!-- about-page.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="images/tab-logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Epic Fitness</title>
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  </head>
+  <body>
+    <div id="preloader"></div>
+    <div class="overlay">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <header class="hero-area | bg-photo margin-bottom-700">
+      <div class="nav-bg-color">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="#">
+              <img src="images/epic.png" alt="logo" class="logo" />
+            </a>
+            <nav class="primary-navigation">
+              <ul class="nav-list" aria-label="primary" role="list">
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Classes</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact </a></li>
+              </ul>
+            </nav>
+            <button class="button">Become Member</button>
+          </div>
+        </div>
+      </div>
+      <section>
+        <div class="container">
+          <div class="even-columns mission-area">
+            <div class="hero-wrapper">
+              <div class="square-title"></div>
+              <h3 class="mission-vision-title | fs-primary-heading fw-black">Mission</h3>
+              <p class="mission">
+                "At Epic Fitness, our mission is to empower individuals to transform their lives through a holistic approach to
+                fitness. We are dedicated to providing the guidance, support, and community needed to make health and wellness
+                goals a reality. Through innovative training methods, personalized coaching, and a commitment to fostering a
+                positive and inclusive environment, we inspire a lifelong journey of physical and mental well-being."
+              </p>
+            </div>
+            <div class="hero-wrapper">
+              <div class="square-title"></div>
+              <h3 class="mission-vision-title | fs-primary-heading fw-black">Vission</h3>
+              <p class="vision">
+                "Our vision at Epic Fitness is to be the catalyst for a global movement towards a healthier and happier world. We
+                envision a community where individuals of all ages and fitness levels come together to achieve their full
+                potential, fostering a culture of wellness, positivity, and personal growth. As we evolve, we aim to set new
+                standards in the fitness industry, continuously innovating and positively impacting lives on a global scale."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <section class="flow-area">
+        <div class="container">
+          <div class="team-wrapper">
+            <div class="square-title"></div>
+            <h3 class="fw-black fs-primary-heading">Meet the Team</h3>
+          </div>
+          <div class="even-columns">
+            <div class="team-card">
+              <div class="team-card-image-wrapper">
+                <img class="team-card-image" src="images/testimonial-profile.jpg" alt="" />
+              </div>
+              <div class="team-info">
+                <p>John Agustus</p>
+                <p>Weight loss trainer</p>
+              </div>
+            </div>
+            <div class="team-card">
+              <div class="team-card-image-wrapper">
+                <img class="team-card-image" src="images/testimonial-profile.jpg" alt="" />
+              </div>
+            </div>
+            <div class="team-card">
+              <div class="team-card-image-wrapper">
+                <img class="team-card-image" src="images/testimonial-profile.jpg" alt="" />
+              </div>
+            </div>
+            <div class="team-card">
+              <div class="team-card-image-wrapper">
+                <img class="team-card-image" src="images/testimonial-profile.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="box-testing"></div>
+      </section>
+    </main>
+    <footer></footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        fetch("/template.html") // Update the path to the template.html file
+          .then((response) => response.text())
+          .then((html) => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, "text/html");
+
+            // Extract the main content of template.html
+            // const headerContent = doc.querySelector("header").innerHTML;
+
+            const footerContent = doc.querySelector("footer").innerHTML;
+
+            // Replace the main content of about.html with the extracted content
+            // document.querySelector("header").innerHTML = headerContent;
+
+            document.querySelector("footer").innerHTML = footerContent;
+
+            // Additional logic specific to the about page
+          });
+      });
+    </script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- smooth scroll lenis -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <script type="module" src="/main.js"></script>
+    <!-- Additional scripts or imports specific to the about page -->
+  </body>
+</html>

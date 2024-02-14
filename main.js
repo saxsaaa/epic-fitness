@@ -129,7 +129,6 @@ gsap.to(".class-item", {
   delay: 0,
   duration: 2,
   left: 0,
-  stagger: 1,
 
   scrollTrigger: {
     trigger: ".class-item",
@@ -159,7 +158,6 @@ gsap.to(".blog-card", {
   duration: 2,
   left: 0,
   stagger: 1,
-
   scrollTrigger: {
     trigger: ".blog-card",
     markers: false,
