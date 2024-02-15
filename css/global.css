@@ -310,6 +310,10 @@ p:not([class]) {
   margin-top: 6rem;
   margin-bottom: 6rem;
 }
+.text-margin {
+  margin: top 3rem;
+  margin-bottom: 1rem;
+}
 @media (min-width: 47em) {
   .display-md-inline-flex {
     display: inline-flex;
