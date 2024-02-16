@@ -181,3 +181,8 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf);
+
+var swiper = new Swiper(".car-swipper", {
+  effect: "cards",
+  grabCursor: true,
+});
