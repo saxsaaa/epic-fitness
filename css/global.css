@@ -310,6 +310,10 @@ p:not([class]) {
   margin-top: 6rem;
   margin-bottom: 6rem;
 }
+.about-flow-area {
+  margin-top: 9rem;
+  margin-bottom: 9rem;
+}
 .text-margin {
   margin: top 3rem;
   margin-bottom: 1rem;
