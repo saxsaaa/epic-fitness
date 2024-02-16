@@ -469,51 +469,66 @@ p:not([class]) {
 }
 
 /* footer */
-
 .footer-background {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/footer.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-color: #121319;
 }
-
-.footer-grid {
+.footer-wrapper {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  padding: 4rem;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  width: 100%;
 }
 .logo-area {
   display: grid;
-  align-content: center;
-  justify-content: center;
-  padding: 2rem;
-}
-.footer-grid-area {
-  display: flex;
   align-items: center;
-  gap: 2rem;
-}
-.footer-box-icon {
-  background: rgb(255, 102, 102);
-  background: linear-gradient(180deg, rgba(255, 102, 102, 1) 0%, rgba(229, 34, 34, 1) 35%, rgba(153, 1, 1, 1) 100%);
-  color: var(--clr-neutral-100);
+  justify-content: center;
   width: 100%;
-  height: 100%;
-  padding: var(--size-300);
-  font-size: 2.5rem;
-  /* position: relative;
-  bottom: 3rem;
-  left: 2rem; */
-  text-align: center;
-  border-radius: 0 1.5rem;
+  margin-top: 2rem;
+}
+.logo-area img {
+  width: 40%;
+  height: auto;
+  margin-left: 14rem;
+}
+.social-icons {
+  display: grid;
+  align-items: center;
+  justify-content: center; /* Optional: Align items vertically in the center */
+  margin-top: 1rem;
+}
+.social-icons ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-top: -1rem;
+  margin-bottom: 2rem;
 }
 
-.footer-text {
+.social-icons ul li {
+  margin: 0 6px;
+  height: 1.6rem;
+  width: 1.6rem;
   color: var(--clr-neutral-100);
-  font-weight: bold;
-  width: 300%;
+
+  background: var(--clr-accent-500);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8rem;
+  transition: all ease 0.3s;
 }
+
+.social-icons ul li:hover {
+  transform: scale(1.4);
+  cursor: pointer;
+}
+
+.social-icons a {
+  color: var(--clr-neutral-100);
+}
+
 @media screen and (min-width: 47em) and (max-width: 80em) {
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
