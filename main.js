@@ -34,16 +34,16 @@ function startLoaderAnimation() {
   });
 }
 
-// Reset preloader animation before page reload
-window.addEventListener("beforeunload", function () {
-  var preloader = document.getElementById("preloader");
-  preloader.style.display = "block";
-  window.scrollTo(0, 0); // Scroll to top when refreshed
-  // Hide the preloader after a short delay
-  setTimeout(function () {
-    preloader.style.display = "none";
-  }, 100);
-});
+// // Reset preloader animation before page reload
+// window.addEventListener("beforeunload", function () {
+//   var preloader = document.getElementById("preloader");
+//   preloader.style.display = "block";
+//   window.scrollTo(0, 0); // Scroll to top when refreshed
+//   // Hide the preloader after a short delay
+//   setTimeout(function () {
+//     preloader.style.display = "none";
+//   }, 100);
+// });
 
 // Hero section animation
 gsap.to(".hero-wrapper", {

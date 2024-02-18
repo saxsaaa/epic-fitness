@@ -473,12 +473,14 @@ p:not([class]) {
   background-color: #121319;
 }
 .footer-wrapper {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3rem;
+  padding-top: 3rem;
   width: 100%;
 }
+
 .logo-area {
   display: grid;
   align-items: center;
@@ -487,9 +489,9 @@ p:not([class]) {
   margin-top: 2rem;
 }
 .logo-area img {
-  width: 40%;
+  width: 50%;
   height: auto;
-  margin-left: 14rem;
+  margin-left: 10.3rem;
 }
 .social-icons {
   display: grid;
