@@ -27,29 +27,9 @@
       <div class="bar"></div>
     </div>
     <!-- end of preloader animation -->
-    <header class="hero-area | bg-photo margin-bottom-700">
-      <div class="nav-bg-color">
-        <div class="container">
-          <div class="nav-wrapper">
-            <a href="#">
-              <img src="images/epic.png" alt="logo" class="logo" />
-            </a>
-            <nav class="primary-navigation">
-              <ul class="nav-list" aria-label="primary" role="list">
-                <li><a href="#">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="#">Classes</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact </a></li>
-              </ul>
-            </nav>
-            <button class="button">Become Member</button>
-          </div>
-        </div>
-      </div>
-      <section>
+    <header></header>
+    <main>
+      <section class="bg-photo">
         <div class="container">
           <div class="even-columns flow">
             <div class="hero-wrapper">
@@ -66,8 +46,6 @@
           </div>
         </div>
       </section>
-    </header>
-    <main>
       <section class="flow-area">
         <div class="container">
           <div class="box-area even-columns | custom-grid">
@@ -452,51 +430,15 @@
           </div>
         </div>
       </section>
-      <footer>
-        <div class="footer-background">
-          <div style="padding-bottom: 3rem" class="container">
-            <div class="footer-wrapper">
-              <nav class="primary-navigation">
-                <ul class="nav-list" aria-label="primary" role="list">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="#">Classes</a></li>
-                  <li><a href="#">Gallery</a></li>
-                  <li><a href="#">Pages</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Contact </a></li>
-                </ul>
-              </nav>
-              <div class="logo-area">
-                <img src="images/epic.png" alt="" />
-              </div>
-
-              <div class="social-icons">
-                <ul>
-                  <li id="facebookIcon">
-                    <i class="fa-brands fa-facebook-f"></i>
-                  </li>
-                  <li id="twitterIcon">
-                    <i class="fa-brands fa-twitter"></i>
-                  </li>
-                  <li id="instagramIcon">
-                    <i class="fa-brands fa-instagram"></i>
-                  </li>
-                  <li id="linkedinIcon">
-                    <i class="fa-brands fa-linkedin"></i>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <hr />
-          </div>
-        </div>
-      </footer>
+      <footer></footer>
     </main>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- smooth scroll lenis -->
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js"></script>
+    <!-- Script for fetching and replacing header/footer content -->
+    <script type="module" src="/fetchContent.js"></script>
+    <!-- main js -->
     <script type="module" src="/main.js"></script>
   </body>
 </html>

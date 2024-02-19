@@ -426,28 +426,28 @@ p:not([class]) {
   pointer-events: none; /* Disable pointer events when hidden */
 }
 
-/* navbar */
 .nav-bg-color {
   background-color: rgba(20, 20, 20, 0.5);
+  position: fixed;
+  width: 100%;
+  z-index: 1000; /* Ensure the navbar is above other elements */
+  /* transition: opacity 0.5s; */
 }
-.nav-wrapper {
-  padding-top: var(--size-300);
-  padding-bottom: var(--size-300);
+.scrolled {
+  background-color: rgba(20, 20, 20, 1); /* Set to the desired opaque color */
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
 }
 .nav-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: top 0.3s; /* Smooth transition effect */
-}
-
-.nav-list {
-  font-size: var(--fs-nav);
+  padding: var(--size-300) 0;
 }
 
 .nav-list {
   display: flex;
   gap: clamp(var(--size-400), 5vw, var(--size-700));
+  font-size: var(--fs-nav);
   font-weight: var(--fw-bold);
 }
 
@@ -467,7 +467,6 @@ p:not([class]) {
   text-decoration: none;
   color: var(--clr-accent-500);
 }
-
 /* footer */
 .footer-background {
   background-color: #121319;
@@ -493,13 +492,13 @@ p:not([class]) {
   height: auto;
   margin-left: 10.3rem;
 }
-.social-icons {
+.footer-social-icons {
   display: grid;
   align-items: center;
   justify-content: center; /* Optional: Align items vertically in the center */
   margin-top: 1rem;
 }
-.social-icons ul {
+.footer-social-icons ul {
   display: flex;
   list-style: none;
   padding: 0;
@@ -507,7 +506,7 @@ p:not([class]) {
   margin-bottom: 2rem;
 }
 
-.social-icons ul li {
+.footer-social-icons ul li {
   margin: 0 6px;
   height: 1.6rem;
   width: 1.6rem;
@@ -522,12 +521,12 @@ p:not([class]) {
   transition: all ease 0.3s;
 }
 
-.social-icons ul li:hover {
+.footer-social-icons ul li:hover {
   transform: scale(1.4);
   cursor: pointer;
 }
 
-.social-icons a {
+.footer-social-icons a {
   color: var(--clr-neutral-100);
 }
 

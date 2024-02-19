@@ -417,7 +417,7 @@
   position: absolute; /* Position the price text absolutely within the parent container */
   top: -4.3rem; /* Adjust the distance from the top */
   left: calc(5%); /* Center the price horizontally */
-  z-index: 9999;
+  z-index: 500;
   border-radius: 0 1rem;
 }
 .class-duration {
