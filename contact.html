@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Epic Fitness | Contact</title>
     <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/contact.css" />
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- icons -->
@@ -26,7 +26,70 @@
       <div class="bar"></div>
     </div>
     <header></header>
-    <main></main>
+    <main>
+      <section>
+        <div class="contact-grid">
+          <div class="contact-image-wrapper">
+            <div class="contact-image">
+              <img src="images/equipment-3.jpg" alt="" />
+              <img src="images/equipment-3.jpg" alt="" />
+              <img src="images/equipment-3.jpg" alt="" />
+            </div>
+          </div>
+          <div class="contact-form-wrapper">
+            <div class="square-title"></div>
+            <h3 class="fw-bold fs-primary-heading">Contact Us</h3>
+            <p>Connect with our fitness experts to discuss your preferences and needs at Epic Fitness.</p>
+            <p>What option you're interested in?</p>
+            <form id="contactForm">
+              <div class="radio-wrapper">
+                <label for="gymMembership">
+                  <input type="radio" id="gymMembership" name="membershipType" value="gymMembership" />
+                  Gym Membership
+                </label>
+
+                <label for="personalTraining">
+                  <input type="radio" id="personalTraining" name="membershipType" value="personalTraining" />
+                  Personal Training
+                </label>
+
+                <label for="groupClasses">
+                  <input type="radio" id="groupClasses" name="membershipType" value="groupClasses" />
+                  Group Classes
+                </label>
+
+                <label for="otherSpecify">
+                  <input type="radio" id="otherSpecify" name="membershipType" value="otherSpecify" />
+                  Other
+                </label>
+              </div>
+
+              <p>Your Details</p>
+
+              <div class="even-columns">
+                <div class="input-field">
+                  <input type="text" required spellcheck="false" />
+                  <label>Name:</label>
+                </div>
+                <div class="input-field">
+                  <input type="email" required spellcheck="false" />
+                  <label>Email:</label>
+                </div>
+              </div>
+
+              <label for="message">Message:</label>
+              <textarea id="message" name="message"></textarea>
+
+              <p>
+                By clicking the button below, you agree to our Terms of Service and have read and understood our Privacy Policy.
+              </p>
+
+              <input type="submit" value="Get in Touch" class="button" />
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer></footer>
 
     <!-- Swiper JS -->

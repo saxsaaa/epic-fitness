@@ -1,1 +1,80 @@
 @import url("global.css");
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.contact-image {
+  padding: 4.5rem;
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  background-color: var(--clr-primary-400);
+}
+
+.contact-image img {
+  height: 16rem;
+  width: 27rem;
+  border: 0.5rem solid var(--clr-neutral-100);
+  border-radius: 0.7rem;
+  object-fit: cover;
+  filter: drop-shadow(0 0 0.75rem rgb(168, 168, 168));
+}
+
+.contact-image img:nth-child(2) {
+  height: 15.5rem;
+  width: 25rem;
+  left: 14.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.contact-image img:nth-child(3) {
+  width: 23rem;
+  height: 15rem;
+  position: relative;
+  left: 3rem;
+}
+
+.contact-form-wrapper {
+  padding: 12rem;
+}
+.input-field {
+  position: relative;
+  margin-top: 2rem;
+}
+
+.input-field input {
+  width: 350px;
+  height: 60px;
+  border-radius: 6px;
+  font-size: 18px;
+  padding: 0 15px;
+  border: 2px solid #000000;
+  background: transparent;
+  color: #000000;
+  outline: none;
+}
+
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #000000;
+  font-size: 19px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-field input:focus {
+  border: 2px solid #ffcc00;
+}
+
+.input-field input:focus ~ label,
+.input-field input:valid ~ label {
+  top: 5%;
+  font-size: 16px;
+  padding: 0 2px;
+  background: #ffffff;
+}
