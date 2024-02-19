@@ -36,7 +36,7 @@ Follow these steps to explore the Epic Fitness website on your local machine:
 4. start the development server: `npm run dev`
 
 ## Technologies Used
-HTML5: Structure of the web pages.
-CSS3: Styling and layout.
-JavaScript: Adding dynamic elements and interactivity.
-Vite: A fast web development build tool that enhances the development experience.
+* HTML5: Structure of the web pages.
+* CSS3: Styling and layout.
+* JavaScript: Adding dynamic elements and interactivity.
+* Vite: A fast web development build tool that enhances the development experience.
