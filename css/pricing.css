@@ -1,0 +1,108 @@
+@import url("global.css");
+
+.bg-photo {
+  background-image: url("/images/gym-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pricing-header-wrapper {
+  width: 80%;
+  padding: 8rem;
+  color: var(--clr-neutral-100);
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.pricing-header-wrapper p {
+  max-width: 80ch;
+  margin-top: 0.5rem;
+}
+
+.pricing-card-wrapper {
+  gap: 4rem !important;
+  margin-top: -5rem;
+  transition: all 0.5s;
+}
+.pricing-card {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  padding: 2rem;
+  border-radius: 0.3rem;
+  border: 1px solid rgb(233, 232, 232);
+}
+.pricing-title {
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+  margin-bottom: 0.5rem;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pricing-card ul {
+  margin-top: 0.5rem;
+  line-height: 2rem;
+}
+.pricing-monthly {
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+  margin-top: 2rem;
+}
+
+.pricing-card button {
+  margin-top: 1rem;
+  width: 100% !important;
+}
+.benifits-wrapper {
+  gap: 4rem !important;
+}
+.pricing-card-benifits {
+  padding: 2rem !important;
+  line-height: 2.5rem;
+}
+
+.pricing-card-benifits i {
+  color: var(--clr-accent-500);
+  margin-right: 0.3rem;
+}
+
+@media screen and (min-width: 47em) and (max-width: 80em) {
+  .pricing-header-wrapper {
+    width: 100%;
+    padding: 8rem 5rem 8rem 5rem;
+  }
+  .pricing-header-wrapper h3 {
+    font-size: 2.5rem;
+  }
+  .pricing-card-wrapper {
+    gap: 1rem !important;
+  }
+  .pricing-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 47em) {
+  .pricing-header-wrapper h3 {
+    font-size: 2.1rem;
+  }
+  .pricing-header-wrapper {
+    width: 100%;
+    padding: 8rem 2rem 8rem 2rem;
+  }
+  .pricing-title {
+    font-size: 1.5rem;
+  }
+}
