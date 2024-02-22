@@ -30,10 +30,10 @@
       <section>
         <div class="contact-grid">
           <div class="contact-image-wrapper">
-            <div class="contact-image">
-              <img src="images/equipment-3.jpg" alt="" />
-              <img src="images/equipment-3.jpg" alt="" />
-              <img src="images/equipment-3.jpg" alt="" />
+            <div class="contact-image" onmousemove="moveText(event)">
+              <img src="images/map.png" alt="" />
+              <!-- Text that appears on hover -->
+              <div class="location-hover-text" id="text">Sample Location</div>
             </div>
           </div>
           <div class="contact-form-wrapper">
@@ -91,6 +91,17 @@
       </section>
     </main>
     <footer></footer>
+    <script>
+      // JavaScript to move the text with the cursor, accounting for scroll
+      function moveText(event) {
+        // Get the text element
+        var textElement = document.getElementById("text");
+
+        // Update the position of the text based on the cursor and scroll
+        textElement.style.left = event.clientX + window.scrollX + "px";
+        textElement.style.top = event.clientY + window.scrollY + "px";
+      }
+    </script>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

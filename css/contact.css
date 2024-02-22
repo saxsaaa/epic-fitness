@@ -2,42 +2,39 @@
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1.3fr 2fr;
 }
 .contact-image {
-  padding: 5.1rem;
-  display: flex;
-  gap: 3rem;
-  flex-direction: column;
-  background: rgb(255, 65, 65);
-  background: linear-gradient(0deg, rgba(255, 65, 65, 1) 0%, rgba(229, 34, 34, 1) 34%, rgba(153, 1, 1, 1) 100%);
-  align-items: center;
+  height: 63rem;
 }
 
 .contact-image img {
-  height: 16rem;
-  width: 27rem;
-  border: 0.4rem solid var(--clr-neutral-100);
-  border-radius: 0.7rem;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
-
   transition: all 0.5s ease;
 }
 
-.contact-image img:nth-child(2) {
-  height: 15.5rem;
-  width: 25rem;
+/* Style for the text that appears on hover on the map */
+.location-hover-text {
+  display: none;
+  position: absolute;
+  top: 50%;
   left: 50%;
-  position: relative;
-  z-index: 1;
-  filter: drop-shadow(0.8rem 0 0.85rem rgb(207, 207, 207));
-}
+  transform: translate(-50%, -90%);
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  border-radius: 50%;
+  pointer-events: none; /* Allow interaction with the image beneath the text */
+  white-space: normal; /* Allow text to wrap within the circular container */
+  text-align: center; /* Center-align the text */
+  width: 5.5rem; /* Set a max-width to control the size of the circular container */
+  height: 5.5rem;
 
-.contact-image img:nth-child(3) {
-  width: 23rem;
-  height: 15rem;
-  position: relative;
-  left: 3rem;
+  align-content: center;
+}
+.contact-image:hover .location-hover-text {
+  display: block;
 }
 
 .contact-form-wrapper {
@@ -129,18 +126,6 @@
 }
 
 @media screen and (min-width: 47em) and (max-width: 80em) {
-  .contact-image {
-    padding: 5rem 2rem 5rem 2rem;
-  }
-  .contact-image img:nth-child(2) {
-    left: 0;
-    width: 27rem;
-  }
-
-  .contact-image img:nth-child(3) {
-    width: 27rem;
-    left: 0;
-  }
   .radio-wrapper {
     flex-wrap: wrap;
     gap: 1rem;
@@ -148,26 +133,13 @@
 }
 
 @media screen and (max-width: 47em) {
-  .contact-grid {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .contact-image img:nth-child(1) {
-    position: relative;
-    top: 7rem;
-  }
-  .contact-image img:nth-child(2) {
-    left: 0;
-    width: 27rem;
-    display: none;
+  .contact-image {
+    height: 25rem;
+    overflow: hidden;
   }
 
-  .contact-image img:nth-child(3) {
-    left: 0;
-    width: 27rem;
-    display: none;
-  }
-  .contact-image {
-    padding: 0 2rem 5rem 2rem;
+  .contact-grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .contact-form-wrapper h3 {
