@@ -39,48 +39,48 @@
           <div class="contact-form-wrapper">
             <div class="square-title"></div>
             <h3 class="fw-bold fs-primary-heading">Contact Us</h3>
-            <p>Connect with our fitness experts to discuss your preferences and needs at Epic Fitness.</p>
-            <p>What option you're interested in?</p>
+            <p class="contact-text-spacer">
+              Connect with our fitness experts to discuss your preferences and needs at Epic Fitness.
+            </p>
+            <p class="contact-text-spacer fw-bold">What option you're interested in?</p>
             <form id="contactForm">
-              <div class="radio-wrapper">
+              <div class="radio-wrapper contact-text-spacer">
                 <label for="gymMembership">
-                  <input type="radio" id="gymMembership" name="membershipType" value="gymMembership" />
+                  <input class="radio-button" type="radio" id="gymMembership" name="membershipType" value="gymMembership" />
                   Gym Membership
                 </label>
 
                 <label for="personalTraining">
-                  <input type="radio" id="personalTraining" name="membershipType" value="personalTraining" />
+                  <input class="radio-button" type="radio" id="personalTraining" name="membershipType" value="personalTraining" />
                   Personal Training
                 </label>
 
                 <label for="groupClasses">
-                  <input type="radio" id="groupClasses" name="membershipType" value="groupClasses" />
+                  <input class="radio-button" type="radio" id="groupClasses" name="membershipType" value="groupClasses" />
                   Group Classes
                 </label>
 
                 <label for="otherSpecify">
-                  <input type="radio" id="otherSpecify" name="membershipType" value="otherSpecify" />
+                  <input class="radio-button" type="radio" id="otherSpecify" name="membershipType" value="otherSpecify" />
                   Other
                 </label>
               </div>
 
-              <p>Your Details</p>
+              <p class="fw-bold">Your Details:</p>
 
               <div class="even-columns">
                 <div class="input-field">
-                  <input type="text" required spellcheck="false" />
-                  <label>Name:</label>
+                  <input type="text" required spellcheck="false" placeholder="Name:" />
                 </div>
                 <div class="input-field">
-                  <input type="email" required spellcheck="false" />
-                  <label>Email:</label>
+                  <input type="email" required spellcheck="false" placeholder="Email:" />
                 </div>
               </div>
+              <div class="textarea-box">
+                <textarea name="textarea" id="textarea" placeholder="Enter message"></textarea>
+              </div>
 
-              <label for="message">Message:</label>
-              <textarea id="message" name="message"></textarea>
-
-              <p>
+              <p class="contact-text-spacer">
                 By clicking the button below, you agree to our Terms of Service and have read and understood our Privacy Policy.
               </p>
 
