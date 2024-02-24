@@ -490,14 +490,12 @@ p:not([class]) {
 
 .logo-area {
   display: grid;
-  align-items: center;
-  justify-content: center;
+  place-items: center;
   width: 100%;
 }
 .logo-area img {
-  width: 50%;
+  width: 15rem;
   height: auto;
-  margin-left: 11rem;
 }
 .footer-nav {
   margin-top: 1rem;
@@ -569,29 +567,12 @@ p:not([class]) {
   color: var(--clr-accent-500);
 }
 @media screen and (min-width: 47em) and (max-width: 80em) {
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 @media screen and (max-width: 47em) {
-  .footer-grid {
-    grid-template-columns: repeat(1, 1fr);
-    padding: 0 0 4rem 0;
-  }
-
-  .footer-grid-area {
-    gap: 1rem;
-  }
-  .footer-text {
-    width: 600%;
+  .footer-background {
+    padding: 1rem;
   }
 }
 
 @media screen and (max-width: 30em) {
-  .footer-text {
-    width: 300%;
-  }
-  .footer-box-icon {
-    font-size: 2.5rem;
-  }
 }
