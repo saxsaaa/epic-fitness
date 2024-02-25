@@ -185,7 +185,7 @@ function setupScrollAnimation(sectionSelector, startOffset, endOffset) {
     visibility: "visible",
     delay: 0,
     duration: 5,
-    y: "100%",
+    y: "50%",
     stagger: 0,
     ease: "linear.easeInOut",
     scrollTrigger: {
@@ -199,8 +199,8 @@ function setupScrollAnimation(sectionSelector, startOffset, endOffset) {
 }
 
 // Use the function for different sections
-setupScrollAnimation(".going-up-animation", "-1200px 10%", "-1000px 10%");
-setupScrollAnimation(".team-area", "-1800px 10%", "-1500px 10%");
+setupScrollAnimation(".going-up-animation", "-1000px 10%", "-800px 10%");
+setupScrollAnimation(".team-area", "-1300px 10%", "-1000px 10%");
 setupScrollAnimation(".cta", "-1000px 10%", "-500px 10%");
 
 // Function to animate an element from the bottom with stagger
