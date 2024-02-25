@@ -180,4 +180,47 @@ gsap.to(".blog-card", {
   },
 });
 
-// end of index.html animation
+function setupScrollAnimation(sectionSelector, startOffset, endOffset) {
+  gsap.from(sectionSelector, {
+    visibility: "visible",
+    delay: 0,
+    duration: 5,
+    y: "100%",
+    stagger: 0,
+    ease: "linear.easeInOut",
+    scrollTrigger: {
+      trigger: sectionSelector,
+      markers: true,
+      start: startOffset,
+      end: endOffset,
+      scrub: true,
+    },
+  });
+}
+
+// Use the function for different sections
+setupScrollAnimation(".going-up-animation", "-1200px 10%", "-1000px 10%");
+setupScrollAnimation(".team-area", "-1800px 10%", "-1500px 10%");
+setupScrollAnimation(".cta", "-1000px 10%", "-500px 10%");
+
+// Function to animate an element from the bottom with stagger
+// Parameters:
+// - targetSelector: Selector for the target element
+// - delay: Animation delay in seconds
+// - duration: Animation duration in seconds
+// - distance: Distance the element should move up from the bottom
+// - stagger: Stagger value for animating multiple elements
+function animateFromBottom(targetSelector, delay, duration, distance, stagger) {
+  gsap.from(targetSelector, {
+    delay: delay,
+    duration: duration,
+    y: distance,
+    opacity: 0, // Optional: Fade in the element during the animation
+    stagger: stagger, // Optional: Add stagger for animating multiple elements
+  });
+}
+
+// function usage
+animateFromBottom(".mission-area-animation", 1, 1.5, 1000);
+animateFromBottom(".pricing-area-animation", 1, 1.5, 1000, 0.1);
+animateFromBottom(".contact-area-animation", 1, 1.5, 1000, 0.05);
