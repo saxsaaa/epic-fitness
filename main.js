@@ -15,11 +15,15 @@ var swiper = new Swiper(".mySwiper", {
 
 // Preloader functionality
 window.onload = function () {
-  // Hide preloader once the page content is loaded
-  document.getElementById("preloader").style.display = "none";
+  try {
+    // Hide preloader once the page content is loaded
+    document.getElementById("preloader").style.display = "none";
 
-  // Start loader animation after the preloader is hidden
-  startLoaderAnimation();
+    // Start loader animation after the preloader is hidden
+    startLoaderAnimation();
+  } catch (error) {
+    console.error("Error in preloader functionality:", error);
+  }
 };
 
 // Function to animate loader using GSAP

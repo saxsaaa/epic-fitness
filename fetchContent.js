@@ -1,3 +1,21 @@
+function attachEventListeners() {
+  const navToggle = document.querySelector(".mobile-nav-toggle");
+  const primaryNav = document.querySelector(".primary-navigation");
+  const primaryHeader = document.querySelector(".primary-header");
+
+  if (navToggle) {
+    navToggle.addEventListener("click", () => {
+      const isVisible = primaryNav.hasAttribute("data-visible");
+
+      navToggle.setAttribute("aria-expanded", isVisible ? "false" : "true");
+      primaryNav.toggleAttribute("data-visible");
+      primaryHeader.toggleAttribute("data-overlay");
+    });
+  }
+
+  // Add other event listeners as needed
+}
+
 // fetchContent.js
 function fetchAndReplaceContent() {
   fetch("/template.html")
@@ -15,7 +33,8 @@ function fetchAndReplaceContent() {
       // Replace content
       currentHeader.innerHTML = headerContent;
       currentFooter.innerHTML = footerContent;
-
+      // Reattach event listeners
+      attachEventListeners();
       // After content is replaced, reattach the scroll event listener
       var navbar = document.querySelector(".nav-bg-color");
       if (navbar) {

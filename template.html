@@ -17,23 +17,27 @@
     </div>
     <!-- end of preloader animation -->
 
-    <header class="hero-area">
+    <header class="hero-area primary-header">
       <div class="nav-bg-color">
         <div class="container">
           <div class="nav-wrapper">
             <a href="index.html">
               <img src="images/epic.png" alt="logo" class="logo" />
             </a>
-            <nav class="primary-navigation">
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+              <span class="visually-hidden">Menu</span>
+            </button>
+            <nav class="primary-navigation" id="primary-navigation">
               <ul class="nav-list" aria-label="primary" role="list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="pricing.html">Pricing</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="contact.html">Contact </a></li>
+                <button class="button | mobile-nav-button">Become Member</button>
               </ul>
             </nav>
-            <button class="button">Become Member</button>
+            <button class="button | display-sm-none display-md-inline-flex">Become Member</button>
           </div>
         </div>
       </div>
