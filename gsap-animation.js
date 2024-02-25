@@ -190,7 +190,7 @@ function setupScrollAnimation(sectionSelector, startOffset, endOffset) {
     ease: "linear.easeInOut",
     scrollTrigger: {
       trigger: sectionSelector,
-      markers: true,
+      markers: false,
       start: startOffset,
       end: endOffset,
       scrub: true,
