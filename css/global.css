@@ -1,6 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
 :root {
-  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
-
   --clr-accent-500: hsl(360, 79%, 52%); /* #E52222 */
   --clr-accent-400: hsl(360, 100%, 70%); /* #FF6666 */
   --clr-accent-300: hsl(360, 100%, 82%); /* #FFA6A6 */
