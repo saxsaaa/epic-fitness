@@ -1,6 +1,6 @@
 @import url("global.css");
 .bg-photo {
-  background-image: url("/images/gym-2.jpg");
+  background-image: url("../images/gym-2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -239,7 +239,7 @@
   position: absolute;
   z-index: -1;
   inset: 0;
-  background-image: url("/images/bg-tablet-pattern.svg"), url("/images/bg-tablet-pattern.svg");
+  background-image: url("../images/bg-tablet-pattern.svg"), url("../images/bg-tablet-pattern.svg");
   background-position: -15rem -5rem, 80rem -42em;
   background-repeat: no-repeat;
   opacity: 0.1;
