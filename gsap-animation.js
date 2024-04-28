@@ -1,3 +1,4 @@
+console.log("Attempting to import ScrollTrigger module...");
 // Import GSAP and ScrollTrigger
 import { gsap } from "/node_modules/gsap";
 import { ScrollTrigger } from "/node_modules/gsap/ScrollTrigger.js";
