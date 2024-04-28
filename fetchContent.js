@@ -18,7 +18,7 @@ function attachEventListeners() {
 
 // fetchContent.js
 function fetchAndReplaceContent() {
-  fetch("/template.html")
+  fetch("template.html")
     .then((response) => response.text())
     .then((html) => {
       const parser = new DOMParser();
