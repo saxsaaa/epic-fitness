@@ -550,14 +550,14 @@ p:not([class]) {
     width: 1.65em;
     aspect-ratio: 1;
     z-index: 1000;
-    background-image: url("/svg/icon-hamburger.svg");
+    background-image: url("../svg/icon-hamburger.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
   }
 
   .mobile-nav-toggle[aria-expanded="true"] {
-    background-image: url("/svg/icon-close.svg");
+    background-image: url("../svg/icon-close.svg");
   }
   .mobile-nav-toggle {
     display: block;
