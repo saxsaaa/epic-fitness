@@ -1,4 +1,3 @@
-console.log("Attempting to import ScrollTrigger module...");
 // Import GSAP and ScrollTrigger
 import { gsap } from "/gsap";
 import { ScrollTrigger } from "/gsap/ScrollTrigger";
